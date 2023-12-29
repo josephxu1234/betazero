@@ -36,13 +36,16 @@ class ChessWrapper(Board):
 
                 if atk_piece is None or def_piece is None:
                     total_val = 0
+                elif atk_piece.piece_type == chess.KING:
+                    def_val = BASE_VALUES[def_piece.piece_type]/100
+                    total_val = 2 * def_val
                 else:
                     # attacker's piece val
                     atk_val = BASE_VALUES[atk_piece.piece_type]/100
                     def_val = BASE_VALUES[def_piece.piece_type]/100
 
                     # want: use lesser value piece to take greater value piece
-                    total_val = def_val - atk_val
+                    total_val = 2 * (def_val - atk_val)
 
 
             elif move.promotion is not None:

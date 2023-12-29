@@ -15,6 +15,9 @@ BASE_VALUES = {
     chess.KING: 24000
 }
 
+# maximum: 1 side has just king, other side has all its pieces (ima assume aint no one promoting 8 pawns
+# 94 * 8 + 337 * 2 + 365 * 2 + 512 * 2 + 1025
+
 # middle game values
 MG_VALUES= {
     chess.PAWN: 82,
@@ -33,6 +36,15 @@ EG_VALUES = {
     chess.ROOK: 512,
     chess.QUEEN: 936,
     chess.KING: 24000,
+}
+
+KZ_VALUES = {
+    chess.PAWN: 0,
+    chess.KNIGHT: 2,
+    chess.BISHOP: 2,
+    chess.ROOK: 3,
+    chess.QUEEN: 5,
+    chess.KING: 0
 }
 
 # MG and EG PSQTs for each piece
